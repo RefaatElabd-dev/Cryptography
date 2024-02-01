@@ -15,6 +15,15 @@ namespace CaesarCipher
             return key;
         }
 
+        public static Dictionary<char, char> GetDecryptKey(Dictionary<char, char> key) { 
+            var dKey = new Dictionary<char, char>();
+            foreach (KeyValuePair<char, char> item in key)
+            {
+                dKey[item.Value] = item.Key;
+            }
+            return dKey;
+        }
+
         public static string Encrypt(Dictionary<char, char> key, string value)
         {
             StringBuilder encrypedString = new();
@@ -29,24 +38,6 @@ namespace CaesarCipher
                 }
             }
             return encrypedString.ToString();
-        }
-
-        public static string Decrypt(Dictionary<char, char> key, string value)
-        {
-            StringBuilder decryptedString = new();
-            for (var i = 0; i < value.Length; i++)
-            {
-                //decryptedString.Append(key.Keys.Where(k => key[k] == value[i]).First());
-                if (key.ContainsKey(value[i]))
-                { 
-                    decryptedString.Append(key[value[i]]);
-                }
-                else
-                {
-                    decryptedString.Append(value[i]);
-                }
-            }
-            return decryptedString.ToString();
         }
     }
 }

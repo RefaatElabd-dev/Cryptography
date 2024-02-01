@@ -8,8 +8,8 @@ public class Program
         var text = "Starting Cryptography".ToUpper();
         var encrypted = Encrypt(encryptKey, text);
         Console.WriteLine($"encrypted text is : {encrypted}");
-        var decryptKey = GenerateKey(-3);
-        var decrypted = Decrypt(decryptKey, encrypted);
+        var decryptKey = GetDecryptKey(encryptKey);
+        var decrypted = Encrypt(decryptKey, encrypted);
         Console.WriteLine($"decrypted text is : {decrypted}");
     }
 }
