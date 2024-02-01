@@ -6,7 +6,7 @@ namespace CaesarCipher
     {
         public static Dictionary<char, char> GenerateKey(int shift)
         {
-            var domain = "ABCDEFGHIJKLMNOPQRSTUVWXYZ ";
+            var domain = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             var key = new Dictionary<char, char>();
             for (var i = 0; i < domain.Length; i++)
             {
@@ -20,7 +20,13 @@ namespace CaesarCipher
             StringBuilder encrypedString = new();
             for (var i = 0; i < value.Length; i++)
             {
-                encrypedString.Append(key[value[i]]);
+                if (key.ContainsKey(value[i])) {
+                    encrypedString.Append(key[value[i]]);
+                }
+                else
+                {
+                    encrypedString.Append(value[i]);
+                }
             }
             return encrypedString.ToString();
         }
@@ -31,7 +37,14 @@ namespace CaesarCipher
             for (var i = 0; i < value.Length; i++)
             {
                 //decryptedString.Append(key.Keys.Where(k => key[k] == value[i]).First());
-                decryptedString.Append(key[value[i]]);
+                if (key.ContainsKey(value[i]))
+                { 
+                    decryptedString.Append(key[value[i]]);
+                }
+                else
+                {
+                    decryptedString.Append(value[i]);
+                }
             }
             return decryptedString.ToString();
         }

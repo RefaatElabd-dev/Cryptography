@@ -9,12 +9,18 @@ class CaesarCipher():
     def encrypt(key, value):
         encryped_string = ""
         for i in range(len(value)):
-            encryped_string = encryped_string.__add__(key[value[i]])
+            if(key.get(value[i])):
+                encryped_string = encryped_string.__add__(key[value[i]])
+            else: 
+                encryped_string = encryped_string.__add__(value[i])
         return encryped_string
         
 
     def decrypt(key, value):
        decrypted_string = ""
        for i in range(len(value)):
-          decrypted_string = decrypted_string.__add__(key[value[i]])
+          if(key.get(value[i])):
+              decrypted_string = decrypted_string.__add__(key[value[i]])
+          else:
+              decrypted_string = decrypted_string.__add__(value[i])
        return decrypted_string
