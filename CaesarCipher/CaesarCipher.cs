@@ -10,7 +10,7 @@ namespace CaesarCipher
             var key = new Dictionary<char, char>();
             for (var i = 0; i < domain.Length; i++)
             {
-                key[domain[i]] = domain[(i + shift) % domain.Length];
+                key[domain[i]] = domain[(i + shift + domain.Length) % domain.Length];
             }
             return key;
         }
@@ -30,7 +30,8 @@ namespace CaesarCipher
             StringBuilder decryptedString = new();
             for (var i = 0; i < value.Length; i++)
             {
-                decryptedString.Append(key.Keys.Where(k => key[k] == value[i]).First());
+                //decryptedString.Append(key.Keys.Where(k => key[k] == value[i]).First());
+                decryptedString.Append(key[value[i]]);
             }
             return decryptedString.ToString();
         }
