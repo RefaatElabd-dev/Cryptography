@@ -1,9 +1,12 @@
-class CaesarCipher():
-    def generate_key(shift):
+import random
+
+class SubstittutionCipher():
+    def generate_key():
         domain = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        cletters = list(domain)
         key = {}
-        for i in range(len(domain)):
-            key[domain[i]] = domain[(i + shift + len(domain)) % len(domain)]
+        for c in domain:
+            key[c] = cletters.pop(random.randint(0, len(cletters) - 1))
         return key
     
     def get_decryption_key(key):
@@ -25,3 +28,8 @@ class CaesarCipher():
         #         encryped_string = encryped_string.__add__(key[value[i]])
         #     else: 
         #         encryped_string = encryped_string.__add__(value[i])
+
+text = "CAR"
+key = SubstittutionCipher.generate_key()
+print(key)
+print(SubstittutionCipher.encrypt(key, text))
