@@ -5,7 +5,7 @@
     <ProjectGuid>2e745b5e-e1d7-4dea-932b-f4a5bb65235d</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>substitutionCipher.py</StartupFile>
+    <StartupFile>frequencyAnalysis.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -24,6 +24,7 @@
   <ItemGroup>
     <Compile Include="CaesarCipher.py" />
     <Compile Include="CaesarCipherAttack.py" />
+    <Compile Include="frequencyAnalysis.py" />
     <Compile Include="program.py" />
     <Compile Include="substitutionCipher.py" />
   </ItemGroup>
