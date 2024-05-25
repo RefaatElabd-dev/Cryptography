@@ -13,6 +13,12 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "SubstitutionCipher.Py", "Su
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SubstitutionCipher.CSharp", "SubstitutionCipher.CSharp\SubstitutionCipher.CSharp.csproj", "{C6223E2F-C6E5-43CD-9E41-DE9476B666A8}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OneTimePad.CSharp", "OneTimePad.CSharp\OneTimePad.CSharp.csproj", "{0942C43D-C966-4DC3-809F-D40FCA6CBBCD}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "OneTimePad.Python", "OneTimePad.Python\OneTimePad.Python.pyproj", "{174C114D-95AF-43F9-A052-C76A6C9CD8CC}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "StreamCipher", "StreamCipher\StreamCipher.pyproj", "{1CEFC7DC-BF36-4552-902B-268341774E40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +41,14 @@ Global
 		{C6223E2F-C6E5-43CD-9E41-DE9476B666A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6223E2F-C6E5-43CD-9E41-DE9476B666A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6223E2F-C6E5-43CD-9E41-DE9476B666A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0942C43D-C966-4DC3-809F-D40FCA6CBBCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0942C43D-C966-4DC3-809F-D40FCA6CBBCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0942C43D-C966-4DC3-809F-D40FCA6CBBCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0942C43D-C966-4DC3-809F-D40FCA6CBBCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{174C114D-95AF-43F9-A052-C76A6C9CD8CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{174C114D-95AF-43F9-A052-C76A6C9CD8CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CEFC7DC-BF36-4552-902B-268341774E40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CEFC7DC-BF36-4552-902B-268341774E40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
