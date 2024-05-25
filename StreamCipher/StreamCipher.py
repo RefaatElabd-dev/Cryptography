@@ -38,6 +38,19 @@ def modification(cipher):
     mod[12] = ord('1') ^ ord('0')
     return [mod[i] ^ cipher[i] for i in range(len(cipher))]
 
+
+
+def get_key(message, cipher):
+    return bytes([message[i] ^ cipher[i] for i in range(len(cipher))] )
+
+
+def crack(key_stream, cipher):
+    length = min(len(key_stream), len(cipher))
+    return bytes([key_stream[i] ^ cipher[i] for i in range(length)])
+
+
+
+
 key = keyStream(10)
 
 # This is Alice
@@ -67,3 +80,26 @@ key = keyStream(10)
 message = encrypt(key, cipher)
 print(message)
 
+
+# This is the message that Eve gives Alice
+message = "This is my long message that Eve tricks Alice into using".encode()
+
+# This is Alice
+key = keyStream(10)
+cipher = encrypt(key, message)
+
+# This is Eve getting the key stream
+eves_key_stream = get_key(message, cipher)
+
+# This is Bob
+key = keyStream(10)
+message = encrypt(key, cipher)
+
+# This is Alice sending a new message
+message = "Hey Bob. Let's take over the world domination.".encode()
+key = keyStream(10)
+cipher = encrypt(key, message)
+
+# This is Eve extracting the message
+eves_decryption = crack(eves_key_stream, cipher)
+print(eves_decryption)
