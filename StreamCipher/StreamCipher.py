@@ -31,6 +31,13 @@ def transmit2(cipher):
         b.append(c)
     return b
 
+def modification(cipher):
+    mod = [0]*len(cipher)
+    mod[10] = ord(' ') ^ ord('1')
+    mod[11] = ord(' ') ^ ord('0')
+    mod[12] = ord('1') ^ ord('0')
+    return [mod[i] ^ cipher[i] for i in range(len(cipher))]
+
 key = keyStream(10)
 
 # This is Alice
@@ -41,6 +48,21 @@ cipher = encrypt(key, message)
 print(cipher)
 cipher = transmit2(cipher)
 # This is Bob
+key = keyStream(10)
+message = encrypt(key, cipher)
+print(message)
+
+
+
+# This is Alice
+key = keyStream(10)
+message = "Send Bob:   10$".encode()
+cipher = encrypt(key, message)
+
+# This is Bob modifying the message
+cipher = modification(cipher)
+
+# This is the Bank
 key = keyStream(10)
 message = encrypt(key, cipher)
 print(message)
