@@ -49,6 +49,15 @@ def crack(key_stream, cipher):
     return bytes([key_stream[i] ^ cipher[i] for i in range(length)])
 
 
+def brute_force(plain, cipher):
+    for k in range(2**31):
+        bf_key = keyStream(k)
+        for i in range(len(plain)):
+            if bf_key.get_key_byte() != plain[i] ^ cipher[i]:
+                break
+        else:
+            return k
+    return False    
 
 
 key = keyStream(10)
@@ -103,3 +112,27 @@ cipher = encrypt(key, message)
 # This is Eve extracting the message
 eves_decryption = crack(eves_key_stream, cipher)
 print(eves_decryption)
+
+
+# brute force case
+
+# This is Alice
+secret_key = 34567
+print(secret_key)
+key = keyStream(secret_key)
+header = "MESSAGE: "
+message = header + "My secret message to Bob"
+message = message.encode()
+cipher = encrypt(key, message)
+
+# This is Bob
+key = keyStream(secret_key)
+message = encrypt(key, cipher)
+print(message)
+
+# This is Eve
+bf_key = brute_force(header.encode(), cipher)
+print("Eve's brute force key:", bf_key)
+key = keyStream(bf_key)
+message = encrypt(key, cipher)
+print(message)
