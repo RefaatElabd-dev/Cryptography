@@ -19,6 +19,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "OneTimePad.Python", "OneTim
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "StreamCipher", "StreamCipher\StreamCipher.pyproj", "{1CEFC7DC-BF36-4552-902B-268341774E40}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "BlockCipher", "BlockCipher\BlockCipher.pyproj", "{E77E7D15-A741-4322-9C44-ED836253D94E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,8 @@ Global
 		{174C114D-95AF-43F9-A052-C76A6C9CD8CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CEFC7DC-BF36-4552-902B-268341774E40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1CEFC7DC-BF36-4552-902B-268341774E40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E77E7D15-A741-4322-9C44-ED836253D94E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E77E7D15-A741-4322-9C44-ED836253D94E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
