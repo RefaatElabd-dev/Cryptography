@@ -21,6 +21,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "StreamCipher", "StreamCiphe
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "BlockCipher", "BlockCipher\BlockCipher.pyproj", "{E77E7D15-A741-4322-9C44-ED836253D94E}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "KeyExchange", "KeyExchange\KeyExchange.pyproj", "{D813CE91-93D6-4F40-8DAD-1D41EDCB114B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,8 @@ Global
 		{1CEFC7DC-BF36-4552-902B-268341774E40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E77E7D15-A741-4322-9C44-ED836253D94E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E77E7D15-A741-4322-9C44-ED836253D94E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D813CE91-93D6-4F40-8DAD-1D41EDCB114B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D813CE91-93D6-4F40-8DAD-1D41EDCB114B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
