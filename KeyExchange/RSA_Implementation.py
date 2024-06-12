@@ -71,3 +71,31 @@ print('cipher is ', cipher)
 # and for Decrypting it : m = (c**d) % n
 decrypted_message = (cipher**d) % n
 print('Decrypted Message is ', decrypted_message)
+
+
+# Now Lets Attack This Algo. By Factorials track
+e = 5
+n = 234827
+c = 92329
+# This is Attacker
+print("Attacker sees the following:")
+print("  Public key (e, n)", e, n)
+print("  Encrypted cipher", c)
+
+def factor(n):
+    cel_sqrt_n = math.isqrt(n) + 1
+    for i in range(2, cel_sqrt_n):
+        if n % (n//i) == 0:
+            return(i, n//i)
+
+(_p, _q) = factor(n)
+
+print('Calculated primaries: ', _p, _q)
+
+_lambda_n = lcm(p-1, q-1)
+print("Calculated Lambda n", _lambda_n)
+d = get_d(e, _lambda_n)
+print("Calculated Secret exponent", d)
+
+m = c**d % n
+print(" Attacked message", m)
