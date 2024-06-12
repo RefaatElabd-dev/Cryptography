@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>d813ce91-93d6-4f40-8dad-1d41edcb114b</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Diffie_Hellman_KeyExchange.py</StartupFile>
+    <StartupFile>RSA_Implementation.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,6 +22,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Diffie_Hellman_KeyExchange.py" />
+    <Compile Include="RSA_Implementation.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
