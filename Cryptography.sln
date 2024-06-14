@@ -23,6 +23,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "BlockCipher", "BlockCipher\
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "KeyExchange", "KeyExchange\KeyExchange.pyproj", "{D813CE91-93D6-4F40-8DAD-1D41EDCB114B}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "HashFunctions", "HashFunctions\HashFunctions.pyproj", "{2F460407-6647-45F6-A97C-15807FB6F2FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,8 @@ Global
 		{E77E7D15-A741-4322-9C44-ED836253D94E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D813CE91-93D6-4F40-8DAD-1D41EDCB114B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D813CE91-93D6-4F40-8DAD-1D41EDCB114B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F460407-6647-45F6-A97C-15807FB6F2FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F460407-6647-45F6-A97C-15807FB6F2FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
