@@ -1,4 +1,4 @@
-﻿namespace SubstitutionCipher.CSharp
+﻿namespace Substitution.Permutation
 {
     public static class Permutation
     {
@@ -12,7 +12,7 @@
 
             foreach (T item in inputList)
             {
-                var others = inputList.Where(input => !input.Equals(item)).ToList();
+                var others = inputList.Where(input => !input!.Equals(item)).ToList();
                 permutations.AddRange(
                         //select childs Recursivly and prepend curent item
                         Permutations(others).Select(perm => perm.Prepend(item).ToList())
