@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace OneTimePad.PseudoRandomness
+﻿namespace OneTimePad
 {
     public class PseudoRandomness
     {
